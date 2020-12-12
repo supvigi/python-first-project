@@ -15,4 +15,4 @@ if first > second and first > third:
 if third > first and third > second:
     print(FriendlyInterface, "third, its weight is", third)
 
-print("Please, push Ctrl + R to compare another three coins")
+print("Please, push Ctrl + LShift + R to compare another three coins")
