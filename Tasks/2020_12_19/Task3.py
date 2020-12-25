@@ -33,7 +33,7 @@ def tank2_shot():
     fire_or_critical_or_not2 = randint(1, 3)
 
     if reach_or_not2 == 2:
-        if fire_or_not2 == 2:
+        if fire_or_critical_or_not2 == 2:
             tank1["health"] -= tank2["fire"]
             tank1["health"] -= 1
             print("Reach and bonus, tank1 is burning! Tank1 health:", tank1["health"])
