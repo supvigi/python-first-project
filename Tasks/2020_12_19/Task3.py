@@ -1,12 +1,15 @@
 from random import randint
 
 
-def tank1_shoot():
+def tank1_shot():
     reach_or_not = randint(1, 3)
-    fire_or_not = randint(1, 2)
+    fire_or_critical_or_not = randint(1, 3)
 
     if reach_or_not == 2:
-        if fire_or_not == 2:
+        if fire_or_critical_or_not == 1:
+            tank2["health"] -= tank1["fire"] * 2
+            print("Reach and bonus, tank2 got critical! Tank2 health:", tank2["health"])
+        elif fire_or_critical_or_not == 2:
             tank2["health"] -= tank1["fire"]
             tank2["health"] -= 1
             print("Reach and bonus, tank2 is burning! Tank2 health:", tank2["health"])
@@ -25,9 +28,9 @@ def tank1_shoot():
         print("Miss! Tank2 health:", tank2["health"])
 
 
-def tank2_shoot():
+def tank2_shot():
     reach_or_not2 = randint(1, 3)
-    fire_or_not2 = randint(1, 2)
+    fire_or_critical_or_not2 = randint(1, 3)
 
     if reach_or_not2 == 2:
         if fire_or_not2 == 2:
@@ -65,8 +68,8 @@ while True:
     who_shoots = input("Put in the tank that is shooting: ")
 
     if who_shoots == "tank1":
-        tank1_shoot()
+        tank1_shot()
     elif who_shoots == "tank2":
-        tank2_shoot()
+        tank2_shot()
     else:
         print("What did you write?")
