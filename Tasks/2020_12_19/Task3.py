@@ -67,9 +67,9 @@ while True:
 
     who_shoots = input("Put in the tank that is shooting: ")
 
-    if who_shoots == "tank1":
+    if who_shoots == "tank1 shoot":
         tank1_shot()
-    elif who_shoots == "tank2":
+    elif who_shoots == "tank2 shoot":
         tank2_shot()
     else:
         print("What did you write?")
